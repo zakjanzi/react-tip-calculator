@@ -22,7 +22,7 @@ h1 {
   letter-spacing: 5px;
 }
 
-.calc-body {
+.calculator-body {
   background-color: rgb(255, 255, 255);
   height: 50vh;
   width: 100vh;
@@ -78,6 +78,18 @@ h1 {
   color: #fff;
 }
 
+.tip-button:hover {
+  background-color: #3aa578;
+  cursor: pointer;
+}
+
+.tip-button:active,
+.tip-button.active {
+  background-color: #4CAF50; 
+}
+
+
+
 .tip-buttons {
   display: flex;
   flex-direction: row;
@@ -90,6 +102,10 @@ h1 {
 
 }
 
+.custom-tip-button {
+  width: 120px;
+}
+
 .reset-button {
   width: 350px;
   height: 40px;
@@ -98,7 +114,18 @@ h1 {
   text-transform: uppercase;
   background-color: rgb(56, 219, 138);
   border: none;
+  cursor: pointer;
 
+}
+
+.reset-button:hover {
+  background-color: #3aa578;
+  cursor: pointer;
+}
+
+.reset-button:active,
+.reset-button.active {
+  background-color: #d8d407; 
 }
 
 

@@ -1,11 +1,9 @@
-import React from 'react';
 
-function InputField(props) {
-  const { value, onChange, placeholder, disabled, title } = props;
+export default function InputField(props) {
+  const { value, onChange, placeholder, disabled, title, className, style } = props;
 
   return (
-    <div>
-      
+    <div className={className} style={{width: '100%', ...style}}>
       <h3 style={{ 
         fontFamily: 'Source Code Pro, monospace',
         fontSize: '12px',
@@ -26,7 +24,7 @@ function InputField(props) {
           display: 'flex',
           verticalAlign: 'top',
           fontSize: '24px',
-          width: '400px',
+          width: '100%',
           height: '45px',
           backgroundColor: 'rgb(245, 245, 245)',
           border: 'none',
@@ -34,11 +32,8 @@ function InputField(props) {
           textAlign: 'right',
           color: 'darkgreen',
           fontFamily: 'Source Code Pro, monospace',
-          
         }}
       />
     </div>
   );
 }
-
-export default InputField;
