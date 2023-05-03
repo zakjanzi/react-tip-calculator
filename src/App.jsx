@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import InputField from './components/inputField'
-import CustomButton from './components/customButton'
+import InputField from './components/InputField'
+import CustomButton from './components/CustomButton'
 import './App.css'
 
 // icons 

@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
 
-function CustomButton(props) {
+export default function CustomButton(props) {
   const { children, onClick, disabled, className } = props;
 
   return (
@@ -20,5 +20,3 @@ CustomButton.propTypes = {
   disabled: PropTypes.bool,
   className: PropTypes.string
 };
-
-export default CustomButton;
