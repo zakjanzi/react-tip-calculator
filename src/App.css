@@ -1,13 +1,25 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
+
 
 body {
   background-color: rgb(186, 235, 232);
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'IBM Plex Mono', monospace;
+  margin: 0;
+  display: flex;
+  place-items: center;
 }
 
 h1 {
@@ -15,6 +27,7 @@ h1 {
   line-height: 1.1;
 }
 
+/* Splitter title*/
 .main-title {
   font-size: 28px;
   margin-bottom: 50px;
@@ -22,7 +35,7 @@ h1 {
   letter-spacing: 5px;
 }
 
-.calculator-body {
+.calculator-container {
   background-color: rgb(255, 255, 255);
   height: 50vh;
   width: 100vh;
@@ -32,7 +45,7 @@ h1 {
   overflow: auto;
 }
 
-.results-box {
+.results-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -45,6 +58,15 @@ h1 {
   border-radius: 20px;
   color: #fff;
 }
+
+.right-side-values {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 24px;
+  color: #25BDAA
+}
+
 
 .input-box {
   width: calc(50% - 20px);
@@ -65,7 +87,7 @@ h1 {
 
 .tip-button {
   display: flex;
-  background-color: rgb(9, 59, 47);
+  background-color: #00474B;
   border: none;
   width: 120px;
   margin-top: 15px;
@@ -74,23 +96,23 @@ h1 {
   height: 46px;
   justify-content: center;
   align-items: center;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   color: #fff;
 }
 
 .tip-button:hover {
-  background-color: #3aa578;
+  background-color: #9FE8DF;
   cursor: pointer;
 }
 
 .tip-button:active,
 .tip-button.active {
-  background-color: #4CAF50; 
+  background-color: #9FE8DF; 
 }
 
 
 
-.tip-buttons {
+.preset-tip-buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -110,7 +132,7 @@ h1 {
   width: 350px;
   height: 40px;
   border-radius: 5px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   text-transform: uppercase;
   background-color: rgb(56, 219, 138);
   border: none;
@@ -119,7 +141,7 @@ h1 {
 }
 
 .reset-button:hover {
-  background-color: #3aa578;
+  background-color: #9FE8DF;
   cursor: pointer;
 }
 
@@ -129,23 +151,84 @@ h1 {
 }
 
 
-.text-total {
+.results-sub-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.tip-amount {
-  margin-right: 190px;
+
+.left-side-text {
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.per-person-text {
+  font-size: 12px;
+  color: #a8a8a8;
 }
 
 .subtitle {
-  font-size: 12px;
-  color: #dddddd;
-}
-
-.per-person {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
+/* mobile responsive */
+
+
+@media only screen and (max-width: 600px) {
+  #root {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  }
+
+@media only screen and (max-width: 600px) {
+  .main-title {
+    width: 100%;
+    display: block;
+    justify-content: center;
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: block;
+    justify-content: center;
+    width: max-content;
+    height: 100%;
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .results-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(7, 80, 58);
+    width: calc(50% - 20px);
+    height: 100%;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    color: #fff;
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .results-sub-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}}

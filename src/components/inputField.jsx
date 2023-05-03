@@ -1,6 +1,6 @@
 
 export default function InputField(props) {
-  const { value, onChange, placeholder, disabled, title, className, style } = props;
+  const { value, onChange, placeholder, disabled, title, className, style, step } = props;
 
   return (
     <div className={className} style={{width: '100%', ...style}}>
@@ -14,12 +14,18 @@ export default function InputField(props) {
       </h3>
       <input
         type="number"
-        step="0.01"
+        //to not allow users to enter negative numbers
+        onKeyPress={(e) => {
+          if (e.key === '-' || e.key === '+' || e.key === 'e') {
+            e.preventDefault();
+          }
+        }}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
         disabled={disabled}
-        pattern="[0-9]*\.?[0-9]*"
+        step={step}
+        pattern="[0-9]*\\.[0-9]*"
         style={{ 
           display: 'flex',
           verticalAlign: 'top',
