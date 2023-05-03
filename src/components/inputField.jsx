@@ -1,17 +1,18 @@
 
+
 export default function InputField(props) {
   const { value, onChange, placeholder, disabled, title, className, style, step } = props;
 
   return (
     <div className={className} style={{width: '100%', ...style}}>
-      <h3 style={{ 
-        fontFamily: 'Source Code Pro, monospace',
-        fontSize: '12px',
+      <h2 style={{ 
+        fontFamily: 'IBM Plex Mono',
+        fontSize: '1rem',
         display: 'flex',
         marginRight: '10px'
       }}>
         {title}
-      </h3>
+      </h2>
       <input
         type="number"
         //to not allow users to enter negative numbers

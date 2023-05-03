@@ -79,7 +79,7 @@ function App() {
           </div>
           
           <div className='select-tip-section'>
-            <h3 className='select-tip-title'>Select Tip %</h3>
+            <h2 className='select-tip-title'>Select Tip %</h2>
             
             {/* tip buttons */}
             <div className='preset-tip-buttons'>
@@ -104,13 +104,13 @@ function App() {
         <div className='results-container'>
           <div className="results-sub-container">
           <div className='left-side-text'>
-            <h3 className='subtitle'>Tip Amount<br /><span className='per-person-text'> / person</span></h3>
-            <h3 className='subtitle'>Total<br /><span className='per-person-text'> / person</span></h3>
+            <h2 className='subtitle'>Tip Amount<br /><span className='per-person-text'> / person</span></h2>
+            <h2 className='subtitle'>Total<br /><span className='per-person-text'> / person</span></h2>
           </div>
 
           <div className='right-side-values'>
-            <h3>${calculateTipAmount().toFixed(2)}</h3>
-            <h3>${calculateTotalAmount().toFixed(2)}</h3>
+            <h2>${calculateTipAmount().toFixed(2)}</h2>
+            <h2>${calculateTotalAmount().toFixed(2)}</h2>
           </div>
 
 
